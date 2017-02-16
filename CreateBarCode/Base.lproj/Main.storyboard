@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入生成二维码的内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9L1-eS-cnr">
+                                <rect key="frame" x="20" y="30" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GHt-go-Fys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="afv-nC-arR">
+                                <rect key="frame" x="60" y="90" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.60803322459999998" green="0.82850604080000001" blue="0.75804415729999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="afv-nC-arR" secondAttribute="height" id="MFN-4X-85u"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-fX-8LR">
+                                <rect key="frame" x="20" y="320" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qfy-1H-LJC"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBarCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eA1-6C-6WU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="afv-nC-arR" secondAttribute="trailing" constant="60" id="LMe-MJ-7Hf"/>
+                            <constraint firstAttribute="trailing" secondItem="9L1-eS-cnr" secondAttribute="trailing" constant="20" id="PKv-J5-10f"/>
+                            <constraint firstItem="9L1-eS-cnr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Vic-zy-Wrc"/>
+                            <constraint firstItem="mEi-fX-8LR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VzT-Vy-YqX"/>
+                            <constraint firstItem="mEi-fX-8LR" firstAttribute="top" secondItem="afv-nC-arR" secondAttribute="bottom" constant="30" id="ZbZ-TL-tGw"/>
+                            <constraint firstItem="afv-nC-arR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="c5q-2W-nrW"/>
+                            <constraint firstAttribute="trailing" secondItem="mEi-fX-8LR" secondAttribute="trailing" constant="20" id="dDk-AZ-V4g"/>
+                            <constraint firstItem="9L1-eS-cnr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="igy-jW-Dxm"/>
+                            <constraint firstItem="afv-nC-arR" firstAttribute="top" secondItem="9L1-eS-cnr" secondAttribute="bottom" constant="30" id="y24-fy-Qxj"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="barcodeimgV" destination="afv-nC-arR" id="yTQ-xg-WUb"/>
+                        <outlet property="textfont" destination="9L1-eS-cnr" id="Pdc-sM-uoi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="453"/>
+        </scene>
+    </scenes>
+</document>
